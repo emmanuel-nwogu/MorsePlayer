@@ -7,6 +7,7 @@ GPIO.setup(18, GPIO.OUT)
 
 ditLength = 0.5  # Length of a dot in seconds
 
+# Characters-Morse euivalent pairs
 morse = {
         "a": ".-",
         "b": "-...",
@@ -72,6 +73,7 @@ def validate(text):
     return True
 
 
+# This function translates a string to a morse form using dots, dashes, spaces and slashes.
 def translateToMorse(text):
     
     translation = ""
@@ -90,7 +92,6 @@ def translateToMorse(text):
             translation += "/ "
 
     return translation.strip()
-
 
 def keepPlayingPrompt():
     question = "Would you like to play again? y/n  "
